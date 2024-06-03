@@ -31,7 +31,7 @@ return function(Vargs, env)
 						if not service.Players:FindFirstChild(v.Name) then
 							Remote.Send(v, "Function", "Kill")
 						else
-							v:Kick(args[2])
+							v:Kick(args[2] or 'No reason provided')
 						end
 						Functions.Hint(`Kicked {playerName}`, {plr})
 					end
